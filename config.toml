@@ -1,0 +1,15 @@
+[theme]
+# Buttons, sliders, aur highlights ka rang (Trustworthy Blue)
+primaryColor = "#FF6B35"
+
+# App ka main background color (Halka sa off-white, aankhon ke liye aaramdayak)
+backgroundColor = "#FFFDF4"
+
+# Sidebar, Expanders aur Cards ka background (Pure White taaki main page se alag dikhe)
+secondaryBackgroundColor = "#FEF6E1"
+
+# Text ka rang (Gehra grey, pure black nahi taaki padhne mein soft lage)
+textColor = "#2B2D42"
+
+# Font style (Saaf aur modern)
+font = "sans serif"
