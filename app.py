@@ -6,7 +6,10 @@ import plotly.express as px
 from datetime import date
 
 
-import streamlit as st
+# YAHAN SHEET KA LINK DAALNA
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1frzmMjaKIdCip5VNyvcafzneQMwoqaRmpf4eWqEfvzk/edit?usp=sharing"
+conn = st.connection("gsheets", type=GSheetsConnection)
+st.set_page_config(page_title="Smart Electricity Billing", page_icon="⚡", layout="centered") # Centered mobile ke liye best hai
 
 # ==========================================
 # ✨ SIDEBAR KA PREMIUM CSS STYLING ✨
@@ -99,7 +102,6 @@ st.markdown("""
 # ==========================================
 # ⚙️ PAGE SETUP
 # ==========================================
-st.set_page_config(page_title="Smart Electricity Billing", page_icon="⚡", layout="centered") # Centered mobile ke liye best hai
 # 🔥 HERO SECTION (No Revenue)
 st.markdown("""
 <div style="background: linear-gradient(135deg, #FF6B35 0%, #4ECDC4 100%); 
@@ -113,9 +115,7 @@ st.divider()
 # ==========================================
 # 🔗 ULTRA-FAST DATABASE CONNECTION 
 # ==========================================
-# YAHAN APNI SHEET KA LINK DAALNA
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1frzmMjaKIdCip5VNyvcafzneQMwoqaRmpf4eWqEfvzk/edit?usp=sharing"
-conn = st.connection("gsheets", type=GSheetsConnection)
+
 
 @st.cache_data(ttl=600)
 def load_data():
